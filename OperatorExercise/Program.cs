@@ -20,17 +20,31 @@ namespace OperatorExercise
             var mod = a % b;
 
 
-
-
             Console.WriteLine($"{a}/{b} is {div} remainder {mod}");
 
-            var r = 20;
-            var pi = Math.PI;
+            //allow user to input radius
 
-            var areaOfCircle = pi * (r * r);
+            Console.WriteLine("What is the radius of your circle?");
+     
+            var radius = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"The area of a circle with a radius of {r} is {areaOfCircle}");
 
+            //Calculate area of the circle
+
+            var areaOfCircle = CalculateArea(radius);
+            Console.WriteLine($"The area of a circle with a radius of {radius} is {areaOfCircle}\n");
+
+
+
+            Console.WriteLine("Press any key to continue...");
+        }
+
+        public static double CalculateArea(double radius)
+        {
+
+            return Math.PI * (radius * radius);
+
+            
         }
 
     }
